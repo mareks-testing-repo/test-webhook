@@ -26,13 +26,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
+      # Runs setup to sign package
       - name: Run a one-line script
-        run: echo ${{ secrets.TEST }}
+        run: |
+          echo "Hello from github actions"
+          echo ${{ secrets.TEST }}
 
-      # Runs a set of commands using the runners shell
+      # Sign the package?
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
           echo make it run.
+          echo but I can't print ${{ secrets.TEST }}
