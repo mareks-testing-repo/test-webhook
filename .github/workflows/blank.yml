@@ -38,4 +38,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo make it run.
-          echo but I can't print ${{ secrets.TEST }}
+          echo "but I can't print ${{ secrets.TEST }}"
